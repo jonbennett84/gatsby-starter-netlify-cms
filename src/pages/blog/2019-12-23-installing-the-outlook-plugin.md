@@ -2,8 +2,7 @@
 templateKey: blog-post
 title: Installing the Outlook plugin
 date: 2019-12-23T11:07:40.297Z
-description: Installing the Matter Centre outlook plugin is really easy.
-snippet: Installing the Matter Centre outlook plugin is really easy.
+description: ''
 tags:
   - Integration
 ---
