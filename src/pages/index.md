@@ -1,8 +1,8 @@
 ---
 templateKey: index-page
-title: Matter Centre Help Centre
+title: Matter Centre - Documentation
 image: /img/home-jumbotron.jpg
-heading: Great coffee with a conscience
+heading: Matter Centre Documentation
 subheading: Getting you started
 mainpitch:
   title: Why Kaldi
@@ -68,4 +68,3 @@ main:
     alt: Coffee beans
     image: /img/products-grid1.jpg
 ---
-
