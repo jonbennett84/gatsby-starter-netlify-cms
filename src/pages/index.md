@@ -1,9 +1,9 @@
 ---
 templateKey: index-page
-title: Matter Centre - Documentation
+title: Matter Centre | Knowledge Base
 image: /img/home-jumbotron.jpg
-heading: Matter Centre Documentation
-subheading: Getting you started
+heading: Matter Centre
+subheading: Helping you get started
 mainpitch:
   title: Why Kaldi
   description: >

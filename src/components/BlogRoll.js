@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
-import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
   render() {
@@ -17,15 +17,14 @@ class BlogRoll extends React.Component {
                 className={`blog-list-item tile is-child box notification`}
               >
                 <header>
-                  
-                  <p className="post-meta">
+                <p className="tag-marker">{post.frontmatter.tags}</p>
+                 <p className="post-meta">
                     <Link
                       className="title has-text-primary is-size-4"
                       to={post.fields.slug}
                     >
-                      {post.frontmatter.title}
-                    </Link>
-                    <span> &bull; </span>
+                      {post.frontmatter.title} 
+                    </Link>                    
                   
                   </p>
                 </header>
@@ -52,7 +51,7 @@ export default () => (
     query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___date] }
+          sort: { order: DESC, fields: [frontmatter___tags] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
         ) {
           edges {
@@ -66,7 +65,7 @@ export default () => (
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
-                          
+                tags          
               }
             }
           }
