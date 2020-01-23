@@ -17,23 +17,12 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
     <div
-      className="full-width-image margin-top-0 hero"
-      style={{        
-        background: `#004987`      
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'center',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
+      className="full-width-image hero"
+      >
+      <div 
       >
         <h1
-                  className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen md-1"
+                  className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
          
         >
           {title}
@@ -49,20 +38,23 @@ export const IndexPageTemplate = ({
     <section className="section section--gradient">
       <div className="container">
         <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
+          
+                            
                 
-               
-                
-                <div className="column is-12">
+                <div className="col-6">
+                  <h4>Latest features</h4>
                    <BlogRoll />
                
                 </div>
+
+                <div className="col-6">
+                <h4>Getting Started</h4>
+                   <BlogRoll />
+                   </div>
+                
               </div>
-            </div>
-          </div>
-        </div>
+            
+         
       </div>
     </section>
   </div>

@@ -8,7 +8,7 @@ description: >-
 featuredpost: true
 featuredimage: /img/adobestock_290176393-scaled.jpg
 tags:
-  - b
+  - FAQ
 ---
 **Installing the Matter Centre outlook plugin is really easy.**
 

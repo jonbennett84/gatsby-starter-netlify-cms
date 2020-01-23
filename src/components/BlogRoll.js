@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { kebabCase } from 'lodash'
 import { Link, graphql, StaticQuery } from 'gatsby'
+import PreviewCompatibleImage from './PreviewCompatibleImage'
 
 class BlogRoll extends React.Component {
   render() {
@@ -9,29 +9,24 @@ class BlogRoll extends React.Component {
     const { edges: posts } = data.allMarkdownRemark
 
     return (
-      <div className="columns is-multiline">
+      <div>
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
-              <article
-                className={`blog-list-item tile is-child box notification`}
-              >
-                <header>
-                <p className="tag-marker">{post.frontmatter.tags}</p>
-                 <p className="post-meta">
+                                                         
+                  <p>
+                  
                     <Link
-                      className="title has-text-primary is-size-4"
+                      className="has-text-primary title"
                       to={post.fields.slug}
                     >
-                      {post.frontmatter.title} 
-                    </Link>                    
+                      {post.frontmatter.title}
+                    </Link>
+                    
                   
                   </p>
-                </header>
+              
                              
-                
-              </article>
-            </div>
+           
           ))}
       </div>
     )
@@ -51,7 +46,7 @@ export default () => (
     query={graphql`
       query BlogRollQuery {
         allMarkdownRemark(
-          sort: { order: DESC, fields: [frontmatter___tags] }
+          sort: { order: DESC, fields: [frontmatter___date] }
           filter: { frontmatter: { templateKey: { eq: "blog-post" } } }
         ) {
           edges {
@@ -65,7 +60,7 @@ export default () => (
                 title
                 templateKey
                 date(formatString: "MMMM DD, YYYY")
-                tags          
+                          
               }
             }
           }
