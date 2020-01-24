@@ -1,101 +1,57 @@
 @import "~bulma/sass/utilities/initial-variables"
+@import "../components/reset.css"
+@import url(https://fonts.googleapis.com/css?family=Roboto&display=swap)
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap)
+
 
 // Config vars
-// Kaldi logo brand color: #004987
-$kaldi-red: #004987
+// Kaldi logo brand color: #65b5f9
+$kaldi-red: #65b5f9
 $kaldi-red-invert: #fff
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
 $body-color: #333
-$black: #2b2523
+$black: #65b5f9
+$body-font: 'Roboto',-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol
+$title-font: 'Roboto', sans-serif;
 
-.navbar .navbar-menu
-  box-shadow:none !important
 
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
-  display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
-    margin-top: 0
+body
+  font-family: $body-font
+  font-size: 1.25rem
+  line-height: 2.1rem
+  color: rgba(14,30,37,.87)
+  background-color: #f9fafa
+
+p
+  margin-bottom: 0.6em
 
 // Helper Classes
 .full-width-image-container
-  width: 100vw
+  width: 100%
   text-align: center
 
-.full-width-image
-    width: 100vw
-  
-.btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
-    text-decoration: none
-    font-weight: 700
-    color: #CC3700
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
+.article-header
+  padding: 60px 0
 
-.margin-top-0
-  margin-top: 0 !important
+.article-content
+  width: 720px
+  float: right
 
-.navbar-item .icon
-  color: $primary
-// Override for use of svg's from https://simpleicons.org/
-.icon svg
-  width: 1.5rem
-  height: 1.5rem
-  fill: currentColor
-.navbar-brand .navbar-item.logo
-  padding: 0 1rem
+.article-sidebar
+  width: 200px
+  margin-right: 40px  
+  float: left
+
+ 
+
 footer.footer
+  width: 960px
+  margin: 0 auto
   padding: 3rem 0rem 0rem
   background-color: transparent
 
-//Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
-
-
-.menu-label
-  font-size: 1em !important
-  text-align: left
-.menu-list
-  list-style: none !important
-  text-align: left
-.social
-  padding: 2em
-.social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
 
 // blog roll
 
@@ -103,23 +59,8 @@ $menu-label-color: $white-ter
 .hero
   color: rgb(0, 73, 135);
   text-align: center;
-  margin-top: 20px;
+  margin: 60px 0;
 
-@import "~bulma"
-
-
-// responsiveness
-+tablet-only
-  .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
-
-+mobile
-  .blog-list-item header
-    display: block
-  .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
 
 .col-6
   width: 50%;
@@ -130,4 +71,46 @@ section
 
 .title
   font-size: 1.2em;
-  line-height: 1.8em;
+  
+  
+.left-col
+  width: 460px;
+  margin-right: 40px;
+  float: left;
+
+.right-col
+  width: 460px;
+  float: left;
+
+.container
+  width: 960px;
+  margin: 0 auto;
+
+h1, h2, h3, h4 
+  font-family: $title-font
+
+h1
+  font-size: 1.8em
+  margin-bottom: 0.4em
+  font-weight: 500
+  color: $black
+
+h2
+  font-size: 1.4em
+  margin-bottom: 0.4em
+  font-weight: 300
+  color: $black
+
+h3
+  font-size: 1.2em
+  margin-bottom: 0.4em
+
+
+a, a:visited, a:link, a:active
+  color: $primary
+  text-decoration: none
+  font-weight: 500
+
+a:hover
+  text-decoration: underline  
+  color: 

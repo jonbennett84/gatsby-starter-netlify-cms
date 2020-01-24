@@ -22,37 +22,33 @@ export const IndexPageTemplate = ({
       <div 
       >
         <h1
-                  className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
+                  className=""
          
         >
           {title}
         </h1>
         <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
+          className=""
           
         >
           {subheading}
         </h3>
       </div>
     </div>
-    <section className="section section--gradient">
+    <section className="section">
       <div className="container">
-        <div className="section">
-          
-                            
                 
-                <div className="col-6">
+                <div className="left-col">
                   <h4>Latest features</h4>
                    <BlogRoll />
                
                 </div>
 
-                <div className="col-6">
+                <div className="right-col">
                 <h4>Getting Started</h4>
                    <BlogRoll />
                    </div>
                 
-              </div>
             
          
       </div>
